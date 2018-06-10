@@ -15,12 +15,6 @@ Rails.configuration.to_prepare do
     end
 
     UserController.class_eval do
-      before_filter :build_general_law, :only => :signin
-
-      def build_general_law
-        @user_signup = User.new
-        @user_signup.build_general_law
-      end
 
       private
 
@@ -30,7 +24,6 @@ Rails.configuration.to_prepare do
                             :password,
                             :identity_card_number,
                             :password_confirmation,
-                            :general_law_attributes,
                             :terms)
       end
 	  
