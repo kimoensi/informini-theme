@@ -1,4 +1,4 @@
-Kameltheme
+Informini-theme
 ==============
 
 This is the official theme of [Informini](http://informini.org/).
