@@ -12,8 +12,6 @@ Rails.configuration.to_prepare do
                           :validate => true,
                           :autosave => true
 
-    accepts_nested_attributes_for :general_law
-
     validates :terms,
               :acceptance => {
                 :message => _('Please accept the Terms and Conditions'),
@@ -31,10 +29,6 @@ Rails.configuration.to_prepare do
                 :allow_blank => true
               }
 
-    validates :general_law,
-              :presence => {
-                :message => _('Please enter your General Law information')
-              }
 
     validates :name,
               :format => {
@@ -57,13 +51,7 @@ Rails.configuration.to_prepare do
                 :password => password,
                 :password_confirmation => password,
                 :identity_card_number => '000-000000-0001A',
-                :terms => '1',
-                :general_law_attributes => {
-                  :date_of_birth => Date.yesterday,
-                  :marital_status => 'unknown',
-                  :occupation => 'unknown',
-                  :domicile => 'unknown'
-                }
+                :terms => '1'
             )
             user.save!
         end
