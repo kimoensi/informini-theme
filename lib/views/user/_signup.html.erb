@@ -4,8 +4,8 @@
 
 <p>
     <label class="form_label" for="user_signup_user_status"> <%= _('Your status:') %></label>
-    <%= radio_button 'user_signup', 'user_status', 'PM' %> <%= _('Personne morale') %>  &nbsp;&nbsp;&nbsp;&nbsp;
-    <%= radio_button 'user_signup', 'user_status', 'PP' %> <%= _('Personne physique') %>
+    <%= radio_button 'user_signup', 'status_flag', 'PM' %> <%= _('Personne morale') %>  &nbsp;&nbsp;&nbsp;&nbsp;
+    <%= radio_button 'user_signup', 'status_flag', 'PP' %> <%= _('Personne physique') %>
     
 </p>
 
@@ -25,7 +25,7 @@
 
     <p>
       <label class="form_label" for="user_signup_user_address"> <%= _('Your address:') %></label>
-      <%= text_field 'user_signup', 'user_address', { :size => 20, :tabindex => 15, :autocomplete => "off" } %>
+      <%= text_field 'user_signup', 'address_line', { :size => 20, :tabindex => 15, :autocomplete => "off" } %>
     </p>
 
   
