@@ -12,11 +12,18 @@ def column_exists?(table, column)
   end
 end
 
-# Add the identity_card_number field to the User model
-unless column_exists?(:users, :identity_card_number)
-  migration_file_path = '../db/migrate/derechoapreguntar_theme_add_identity_card_number_to_user'
+# Add the address_line field to the User model
+unless column_exists?(:users, :address_line)
+  migration_file_path = '../db/migrate/add_address_line_to_user'
   require File.expand_path migration_file_path, __FILE__
-  DerechoaPreguntarThemeAddIdentityCardNumberToUser.up
+  AddAddressLineToUser.up
+end
+
+# Add the status_flag field to the User model
+unless column_exists?(:users, :status_flag)
+  migration_file_path = '../db/migrate/add_status_flag_to_user'
+  require File.expand_path migration_file_path, __FILE__
+  AddStatusFlagToUser.up
 end
 
 # Create any necessary global Censor rules

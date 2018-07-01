@@ -1,4 +1,4 @@
-Informini-theme
+Infrominitheme
 ==============
 
 This is the official theme of [Informini](http://informini.org/).

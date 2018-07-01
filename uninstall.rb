@@ -12,10 +12,18 @@ def column_exists?(table, column)
 end
 
 if ENV['REMOVE_MIGRATIONS']
-  # Remove the identity_card_number field to the User model
-  if column_exists?(:users, :identity_card_number)
-    migration_file_path = '../db/migrate/derechoapreguntar_theme_add_identity_card_number_to_user'
+  # Remove the address_line field from the User model
+  if column_exists?(:users, :address_line)
+    migration_file_path = '../db/migrate/add_address_line_to_user'
     require File.expand_path migration_file_path, __FILE__
-    DerechoaPreguntarThemeAddIdentityCardNumberToUser.down
+    AddAddressLineToUser.down
   end
+
+  # Remove the status_flag field from the User model
+  if column_exists?(:users, :status_flag)
+    migration_file_path = '../db/migrate/add_status_flag_to_user'
+    require File.expand_path migration_file_path, __FILE__
+    AddStatusFlagToUser.down
+  end
+    
 end
