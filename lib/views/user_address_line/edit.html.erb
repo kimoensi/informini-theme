@@ -1,0 +1,22 @@
+<% @title = _('Change your Address on {{site_name}}',
+   :site_name => site_name) %>
+
+<div id="change_address_line">
+  <%= form_for(@user, :url => user_update_address_line_path) do |f| %>
+    <%= foi_error_messages_for :user %>
+
+    <div class="form_note">
+      <h1><%= @title %></h1>
+    </div>
+
+    <p>
+      <%= f.label :address_line, _('Identity Card Number:'),
+                  :class => 'form_label' %>
+      <%= f.text_field :address_line, :value => @user.address_line,  :placeholder => 'your address' %>
+    </p>
+
+    <div class="form_button">
+      <%= f.submit _('Change Your Address') %>
+    </div>
+  <% end %>
+</div>

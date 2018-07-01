@@ -15,18 +15,18 @@ Rails.configuration.to_prepare do
     end
 
     UserController.class_eval do
-
       private
 
       def user_params(key = :user)
           params[key].slice(:name,
                             :email,
                             :password,
-                            :identity_card_number,
+                            :address_line,
+							:status_flag,
                             :password_confirmation,
                             :terms)
       end
-	  
+
     end
-	
+
 end

@@ -4,14 +4,15 @@
   <li><%= link_to_unless_current _("Introduction"), help_about_path %></li>
   <li><%= link_to_unless_current _("Making requests"), help_requesting_path %></li>
   <li><%= link_to_unless_current _("Your privacy"), help_privacy_path %></li>
-  <li><%= link_to_unless_current _("FOI officers"), help_officers_path %></li>
-  <li><%= link_to_unless_current _("About the software"), help_alaveteli_path %></li>
-  <li><%= link_to_unless_current _("Credits"), help_credits_path %></li>
-  <li><%= link_to_unless_current _("Programmers API"), help_api_path %></li>
-  <li><%= link_to_unless_current _("Advanced search"), advanced_search_path %></li>
+  <li><%= link_to_unless_current "FOI officers", help_officers_path %></li>
+  <li><%= link_to_unless_current "About the software", help_alaveteli_path %></li>
+  <li><%= link_to_unless_current "Credits", help_credits_path %></li>
+  <li><%= link_to_unless_current "Programmers API", help_api_path %></li>
+  <li><%= link_to_unless_current "Advanced search", advanced_search_path %></li>
 </ul>
 
-<h2 id="contact" class="contact"><%= _("Contact us") %></h2>
-<p><%= _("If your question isn't answered here, or you just wanted to let us know something about the site,")%> <a href="<%= help_contact_path %>"><%= _("contact&nbsp;us") %></a>.
+<h2 id="contact" class="contact">Contact us</h2>
+<p>If your question isn't answered here, or you just wanted to let us know
+  something about the site, <a href="<%= help_contact_path %>">contact&nbsp;us</a>.
 </p>
 </div>

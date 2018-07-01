@@ -6,12 +6,8 @@
 # See http://stackoverflow.com/questions/7072758/plugin-not-reloading-in-development-mode
 #
 Rails.configuration.to_prepare do
-  
-  User.class_eval do
-    has_one :general_law, :dependent => :destroy,
-                          :validate => true,
-                          :autosave => true
 
+  User.class_eval do
     validates :terms,
               :acceptance => {
                 :message => _('Please accept the Terms and Conditions'),
@@ -19,16 +15,11 @@ Rails.configuration.to_prepare do
                 :allow_nil => false
               }
 
-    validates :identity_card_number,
-              :presence => {
-                :message => _('Please enter your Identity Card number')
-              },
-              :format => {
-                :with => /\A\d\d\d-\d\d\d\d\d\d-\d\d\d\d[A-Z]\z/,
-                :message => _("Please enter your Identity Card number in the correct format"),
-                :allow_blank => true
-              }
+    validates :status_flag,
+            :presence => { :message => _('Please enter your status') }
 
+	validates :address_line,
+            :presence => { :message => _('Please enter your address') }
 
     validates :name,
               :format => {
@@ -50,7 +41,8 @@ Rails.configuration.to_prepare do
                 :email => AlaveteliConfiguration.contact_email,
                 :password => password,
                 :password_confirmation => password,
-                :identity_card_number => '000-000000-0001A',
+                :address_line => 'my address',
+				:status_flag => '',
                 :terms => '1'
             )
             user.save!
@@ -62,8 +54,8 @@ Rails.configuration.to_prepare do
     private
 
     def update_censor_rules
-      censor_rules.where(:text => identity_card_number).first_or_create(
-        :text => identity_card_number,
+      censor_rules.where(:text => address_line).first_or_create(
+        :text => address_line,
         :replacement => _('REDACTED'),
         :last_edit_editor => THEME_NAME,
         :last_edit_comment => _('Updated automatically after_save')
