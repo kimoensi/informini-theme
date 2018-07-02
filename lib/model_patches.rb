@@ -53,6 +53,10 @@ Rails.configuration.to_prepare do
 
     private
 
+    def user_params
+      params.require(:user_signup).permit(:name, :email, :password, :password_confirmation, :status_flag, :address_line)
+    end  
+	  
     def update_censor_rules
       censor_rules.where(:text => address_line).first_or_create(
         :text => address_line,
