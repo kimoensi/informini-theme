@@ -12,7 +12,7 @@
       <% end %>
 	  
 	  <% if @display_user.status_flag %>
-        <h4><%= _('Address') %>:<h4>
+        <h4><%= _('Status') %>:<h4>
         <pre><%= @display_user.status_flag %></pre>
       <% end %>
 
@@ -30,5 +30,19 @@
     <%= link_to _('Change your email'), signchangeemail_path %> |
     <%= link_to _('Change your Address'), user_edit_address_line_path %> |
     <%= link_to _('Change your Status'), user_edit_status_flag_path %>
+
+    <%= link_to _('Change your password'), new_password_change_path %> |
+    <%= link_to _('Change your email'), signchangeemail_path %>
+    <% if AlaveteliConfiguration.enable_two_factor_auth %>
+    |
+      <% if @display_user.otp_enabled? %>
+        <%= link_to _('View your two factor authentication one time passcode'), one_time_password_path %>
+      <% else %>
+        <%= link_to _('Improve your account security'), one_time_password_path %>
+      <% end %>
+    <% end %>
+
+
+
   </p>
 <% end %>

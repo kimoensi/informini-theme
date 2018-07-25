@@ -6,11 +6,28 @@
       </div>
 
       <div class="intro__browse">
-        <h3><%= number_with_delimiter(@number_of_requests) %></h3>
-        <span><%= _("Number of requests") %></span>
 
-        <h3><%= number_with_delimiter(@number_of_authorities) %></h3>
-        <span><%= _("Number of authorities") %></span>
+        <a href="#" class="link_hero_intro">
+		<div class="div_hero_intro">
+			<span class="span_hero_intro"><%= number_with_delimiter(@number_of_requests) %></span>
+			<br><%= _("Number of requests") %>
+		</div>
+	</a>
+
+        <a href="#" class="link_hero_intro">
+                <div class="div_hero_intro">
+                        <span class="span_hero_intro"><%= number_with_delimiter(@number_of_authorities) %></span>
+                        <br><%= _("Number of authorities") %>
+                </div>
+        </a>
+
+        <a href="#" class="link_hero_intro">
+                <div class="div_hero_intro">
+                        <span class="span_hero_intro"><%= number_with_delimiter(@user_count) %></span>
+                        <br><%= _("Number of users") %>
+                </div>
+        </a>
+
       </div>
     </div>
   </div>

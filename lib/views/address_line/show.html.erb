@@ -10,9 +10,9 @@
     </div>
 
     <p>
-      <%= f.label :address_line, _('Identity Card Number:'),
+      <%= f.label :address_line, _('Address:'),
                   :class => 'form_label' %>
-      <%= f.text_field :address_line, :value => @user.address_line,  :placeholder => 'your address' %>
+      <%= f.text_area :address_line, :rows => 4, :cols => 100, :value => @user.address_line,  :placeholder => 'your address' %>
     </p>
 
     <div class="form_button">

@@ -1,13 +1,13 @@
 # -*- encoding : utf-8 -*-
-class UserIdentityCardNumberController < ApplicationController
+class UserAddresslinesController < ApplicationController
   before_filter :authenticate
 
   def edit; end
 
   def update
-    if @user.update_attributes(:identity_card_number => params[:user][:identity_card_number])
+    if @user.update_attributes(:address_line => params[:user][:address_line])
       redirect_to show_user_profile_path(:url_name => @user.url_name),
-                  :notice => _('Your Identification Card Number was successfully updated')
+                  :notice => _('Your Address was successfully updated')
     else
       render :edit
     end

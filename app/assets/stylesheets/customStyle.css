@@ -94,3 +94,287 @@ color: #010e1b !important;
 input#reedit_button{
 color: #2688dc !important;
 }
+
+
+.mysoc-footer {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #333333;
+    color: #9f9c92;
+    padding: 2em 0;
+    font-size: 1em;
+    line-height: 1.5em;
+    border-top: none
+}
+
+@media (min-height: 700px) {
+    .mysoc-footer {
+        padding: 3em 0
+    }
+}
+
+@media (min-height: 900px) {
+    .mysoc-footer {
+        padding: 4em 0
+    }
+}
+
+.mysoc-footer *,
+.mysoc-footer *:before,
+.mysoc-footer *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+.mysoc-footer a {
+    color: #ffffff
+}
+
+.mysoc-footer a:hover,
+.mysoc-footer a:focus {
+    color: #419BE8
+}
+
+.mysoc-footer__divider {
+    border-top: 1px solid #4C4C4C;
+    margin: 2em 0
+}
+
+@media (min-height: 900px) {
+    .mysoc-footer__divider {
+        margin: 3em 0
+    }
+}
+
+.mysoc-footer__site-name {
+    font-size: 1.5em;
+    line-height: 1em;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+    color: #fff
+}
+
+.mysoc-footer__links {
+    font-size: 1em;
+    line-height: 1.2em
+}
+
+@media (min-width: 42em) {
+    .mysoc-footer__links {
+        overflow: auto;
+        margin: 0 -1em;
+        padding-top: 2.25em
+    }
+}
+
+.mysoc-footer__links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+@media (min-width: 42em) {
+    .mysoc-footer__links ul {
+        float: left;
+        width: 50%;
+        padding: 0 1em
+    }
+}
+
+.mysoc-footer__links li {
+    margin: 0 0 0.5em 0
+}
+
+.mysoc-footer__links a {
+    display: block
+}
+
+.mysoc-footer__donate {
+    background-color: #434343;
+    color: #fff;
+    padding: 1.5em;
+    border-radius: 0.3em;
+    margin-top: 1em
+}
+
+@media (min-width: 42em) {
+    .mysoc-footer__donate {
+        margin-top: 0
+    }
+}
+
+.mysoc-footer__donate__button {
+    display: inline-block;
+    background-color: #419BE8;
+    color: #fff !important;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    text-decoration: none
+}
+
+.mysoc-footer__donate__button:hover,
+.mysoc-footer__donate__button:focus {
+    text-decoration: none;
+    background-color: #2a8fe5;
+    color: #fff !important
+}
+
+.mysoc-footer__orgs {
+    overflow: auto;
+    margin: 0 -1em
+}
+
+.mysoc-footer__org {
+    float: left;
+    padding: 0 1em
+}
+
+.mysoc-footer__org__logo {
+    display: block;
+    margin-top: 0.5em;
+    height: 0;
+    overflow: hidden;
+    padding-top: 32px
+}
+
+.mysoc-footer__org__logo--mysociety {
+    width: 152px;
+    background: transparent url(/assets/mysoc-footer/logo-mysociety-86472a6c675d618a768cda22c95d4530c1e93f6f8603857a5bf5b319f3e69bd7.png) 0 0 no-repeat;
+    background-size: 152px 32px;
+    background-image: url(/assets/mysoc-footer/logo-mysociety-fb6c78c7cfa587e229fb658548a4715caba7b2dcdb9d449222335da6f307e60c.svg), none
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .mysoc-footer__org__logo--mysociety {
+        background-image: url(/assets/mysoc-footer/logo-mysociety@2x-8ddc4aeef982c45ce9b8f6bcd374d87e32a617cbdd9e763814b3d4912afb14e7.png)
+    }
+}
+
+.mysoc-footer__legal {
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color: #9f9c92
+}
+
+.mysoc-footer__badges {
+    margin: 0 -4px;
+    padding: 0;
+    list-style: none
+}
+
+@media (min-width: 42em) {
+    .mysoc-footer__badges {
+        text-align: right
+    }
+}
+
+.mysoc-footer__badges li {
+    margin: 0 4px;
+    display: inline-block
+}
+
+.mysoc-footer__badge {
+    display: inline-block;
+    width: 32px;
+    height: 0;
+    padding-top: 32px;
+    overflow: hidden;
+    border-radius: 100%
+}
+
+.mysoc-footer__badge--github {
+    background: transparent url(/assets/mysoc-footer/icon-github-d2eefa999d2c7b22014464840de41091d213e05eb0fe6341fa4eba12c1a4c29c.png) 0 0 no-repeat;
+    background-size: 32px 32px;
+    background-image: url(/assets/mysoc-footer/icon-github-0a9d264cedb97c4ee3a549d34a6d65f6132e51f2eba38758926d8f85f12d01ac.svg), none
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .mysoc-footer__badge--github {
+        background-image: url(/assets/mysoc-footer/icon-github@2x-5778c16cc956cf276ce0f5182bd4ca13f8380645f0690f1e972527cc9d257fe9.png)
+    }
+}
+
+.mysoc-footer__badge--twitter {
+    background: transparent url(/assets/mysoc-footer/icon-twitter-171b6045a191a59ac483bbb1e400de093ed8180f144750bbb48d856f44ac9828.png) 0 0 no-repeat;
+    background-size: 32px 32px;
+    background-image: url(/assets/mysoc-footer/icon-twitter-4603564b93035788508f5769f27f95d2d657c0247bee4023553ea98bf7bb4eeb.svg), none
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .mysoc-footer__badge--twitter {
+        background-image: url(/assets/mysoc-footer/icon-twitter@2x-f55836c05120f210859e7230a9233e26e9621d4bee41b100141824bc2cef87ba.png)
+    }
+}
+
+.mysoc-footer__badge--facebook {
+    background: transparent url(/assets/mysoc-footer/icon-facebook-9a7ea29e36bce82282e7cd4bf121e3a960bf1378fa1905c5f19811643a585caf.png) 0 0 no-repeat;
+    background-size: 32px 32px;
+    background-image: url(/assets/mysoc-footer/icon-facebook-9f9e9f8e46d532f34be1a82324c168d13e38998ba56189f83422a36c65dae403.svg), none
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5),
+(min-resolution: 144dpi) {
+    .mysoc-footer__badge--facebook {
+        background-image: url(/assets/mysoc-footer/icon-facebook@2x-037147acd1713311401d3276bed35750eaa2d4dc6978211137eb5cfe062aba87.png)
+    }
+}
+
+.mysoc-footer {
+    margin-top: 5em
+}
+
+.mysoc-footer a {
+    text-decoration: none
+}
+
+.mysoc-footer .row {
+    margin: 0 auto;
+    max-width: 64em;
+    width: 100%
+}
+
+.mysoc-footer .row:before,
+.mysoc-footer .row:after {
+    content: " ";
+    display: table
+}
+
+.mysoc-footer .row:after {
+    clear: both
+}
+
+.mysoc-footer .col-sm-5,
+.mysoc-footer .col-sm-4,
+.mysoc-footer .col-sm-3 {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left
+}
+
+@media (min-width: 42em) {
+    .mysoc-footer .col-sm-5 {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 41.66667%;
+        float: left
+    }
+    .mysoc-footer .col-sm-4 {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 33.33333%;
+        float: left
+    }
+    .mysoc-footer .col-sm-3 {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem;
+        width: 25%;
+        float: left
+    }
+}
